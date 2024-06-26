@@ -2,17 +2,23 @@
   "name": "ovh-public-cloud-exporter",
   "module": "src/index.ts",
   "type": "module",
+  "description": "Prometheus exporter for OVH Public Cloud with S3 support",
+  "repository": "https://github.com/iam-medvedev/ovh-public-cloud-exporter.git",
+  "homepage": "https://github.com/iam-medvedev/ovh-public-cloud-exporter#readme",
+  "bugs": "https://github.com/iam-medvedev/ovh-public-cloud-exporter/issues",
+  "author": "Ilya Medvedev <ilya@medvedev.im>",
+  "license": "WTFPL",
   "scripts": {
     "start": "bun run ./src/",
     "generate-types": "bun run ./src/generate-types"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/bun": "^1.1.5",
     "@types/debug": "^4.1.12",
     "openapi-typescript": "^7.0.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.2"
   },
   "dependencies": {
     "debug": "^4.3.5",
