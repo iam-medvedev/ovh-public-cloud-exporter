@@ -17,19 +17,19 @@ export function getConfig() {
       : 600000,
   };
 
-  if (typeof config.endpoint !== "string") {
+  if (!config.endpoint) {
     throw new Error("Please provide `OVH_ENDPOINT`");
   }
-  if (typeof config.appKey !== "string") {
+  if (!config.appKey) {
     throw new Error("Please provide `OVH_APP_KEY`");
   }
-  if (typeof config.appSecret !== "string") {
+  if (!config.appSecret) {
     throw new Error("Please provide `OVH_APP_SECRET`");
   }
-  if (typeof config.consumerKey !== "string") {
+  if (!config.consumerKey) {
     throw new Error("Please provide `OVH_CONSUMER_KEY`");
   }
-  if (typeof config.projectId !== "string") {
+  if (!config.projectId) {
     throw new Error("Please provide `OVH_PROJECT_ID`");
   }
 
