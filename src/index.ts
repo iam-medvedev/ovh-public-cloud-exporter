@@ -61,12 +61,23 @@ debug("Starting server...");
 const server = Bun.serve({
   port: config.port,
   hostname: config.hostname,
-  async fetch() {
-    const result = await metrics.getMetrics();
-    debug(`Sending response, length: ${result.length}`);
-    return new Response(result);
+  async fetch(req) {
+    const url = new URL(req.url);
+    if (url.pathname === config.pathname) {
+      const result = await metrics.getMetrics();
+      debug(`Sending response, length: ${result.length}`);
+      return new Response(result);
+    }
+
+    return new Response("", {
+      status: 404,
+    });
   },
 });
 
 debug("Server started");
-console.info(`[ovh-public-cloud-exporter] Listening on ${server.url}`);
+console.info(
+  `[ovh-public-cloud-exporter] Listening on ${
+    server.url
+  }${config.pathname.slice(1)}`
+);

@@ -11,6 +11,7 @@ export function getConfig() {
 
     port: process.env.PORT ? parseInt(process.env.PORT) : 9140,
     hostname: process.env.HOSTNAME || "0.0.0.0",
+    pathname: process.env.PATHNAME || "/metrics",
     collectorInterval: process.env.COLLECTOR_INTERVAL
       ? parseInt(process.env.COLLECTOR_INTERVAL)
       : 600000,
