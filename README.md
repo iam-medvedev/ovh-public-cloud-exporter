@@ -2,6 +2,16 @@
 
 [Prometheus](https://prometheus.io/) exporter for [OVH Public Cloud](https://www.ovhcloud.com/en/public-cloud/) with S3 support.
 
+- [`ovh-public-cloud-exporter`](#ovh-public-cloud-exporter)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Generating OVH API Keys](#generating-ovh-api-keys)
+    - [Environment Variables](#environment-variables)
+    - [Docker](#docker)
+    - [Docker Compose](#docker-compose)
+  - [Grafana](#grafana)
+  - [License](#license)
+
 ## Getting Started
 
 ### Prerequisites
@@ -81,3 +91,13 @@ services:
     ports:
       - "9140:9140"
 ```
+
+## Grafana
+
+To visualize the data, you can use [this](./dashboard.json) dashboard for [Grafana](https://grafana.com/).
+
+See how to import dashboards from JSON [here](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/import-dashboards/).
+
+## License
+
+`esbuild-plugin-less` is [WTFPL licensed](./LICENSE).
