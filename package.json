@@ -1,0 +1,23 @@
+{
+  "name": "ovh-public-cloud-exporter",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run ./src/",
+    "generate-types": "bun run ./src/generate-types"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/debug": "^4.1.12",
+    "openapi-typescript": "^7.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.5",
+    "openapi-fetch": "^0.10.2",
+    "ovh": "^2.0.3",
+    "prom-client": "^15.1.2"
+  }
+}
