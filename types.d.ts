@@ -12,6 +12,7 @@ declare module "ovh" {
     appKey?: string;
     appSecret?: string;
     consumerKey?: string;
+    apiTimeDiff?: number;
   };
 
   function createClient(init: ClientInit): Client;

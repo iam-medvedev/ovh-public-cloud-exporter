@@ -17,6 +17,7 @@ export class OVHClient {
     appKey: config.appKey,
     appSecret: config.appSecret,
     consumerKey: config.consumerKey,
+    apiTimeDiff: -1,
   });
 
   constructor() {
