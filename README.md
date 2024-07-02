@@ -46,6 +46,7 @@ Set the following environment variables to configure the exporter:
 | `HOSTNAME`           | The hostname or address to bind to         | 0.0.0.0         |
 | `PORT`               | The port on which the service runs         | 9140            |
 | `PATHNAME`           | The path where metrics are exposed         | /metrics        |
+| `DEBUG`              | Use `ovh-exporter` for debug               | -               |
 
 ### Docker
 

@@ -35,13 +35,13 @@ export class OVHClient {
         debug(`[OVHClient] fetching ${input.url}`);
 
         this.ovhClient.request(input.method, url.pathname, (err, result) => {
+          debug("[OVHClient]", { err, result });
           if (err) {
             console.error(err);
             return reject(err);
           }
 
           const body = JSON.stringify(result);
-          debug(`[OVHClient] response ${body}`);
           resolve(
             new Response(body, {
               headers: {
@@ -60,7 +60,6 @@ export class OVHClient {
     try {
       await this.request.GET("/me");
     } catch (err) {
-      console.error(err);
       throw new Error("Cannot authorize");
     }
   }
