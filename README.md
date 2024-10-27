@@ -101,4 +101,4 @@ See how to import dashboards from JSON [here](https://grafana.com/docs/grafana/l
 
 ## License
 
-`esbuild-plugin-less` is [WTFPL licensed](./LICENSE).
+`ovh-public-cloud-exporter` is [WTFPL licensed](./LICENSE).
